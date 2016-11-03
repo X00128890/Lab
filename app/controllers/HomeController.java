@@ -30,4 +30,9 @@ public class HomeController extends Controller {
 
     }
 
+    public Result contact() {
+	return ok(contact.render());
+
+    }
+
 }

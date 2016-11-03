@@ -26,9 +26,10 @@
     </div>
     <!-- List containing nav links -->
     <ul class="nav navbar-nav">
-      <li><a href=@routes.HomeCOntroller.index()">Home</a></li>
-      <li><a href="/about">About Us</a></li>
-      <li><a href="/products">Products</a></li>
+      <li @if(title == "Home"){class="active"}><a href="@routes.HomeController.index()">Home</a></li>
+      <li @if(title == "About Us"){class="active"}><a href="@routes.HomeController.about()">About Us</a></li>
+      <li @if(title == "Products"){class="active"}><a href="@routes.HomeController.products()">Products</a></li>
+      <li @if(title == "Contact Us"){class="active"}><a href="@routes.HomeController.contact()">Contact Us</a><li>
     </ul>
   </nav>
 
